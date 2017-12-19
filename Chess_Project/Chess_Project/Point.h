@@ -9,5 +9,12 @@ private:
 
 public:
 	Point(int x, int y);
+	Point();
 	~Point() = default;
+
+	int getX();
+	int getY();
+
+	bool operator==(Point other) const;
+	bool operator!=(Point other) const;
 };

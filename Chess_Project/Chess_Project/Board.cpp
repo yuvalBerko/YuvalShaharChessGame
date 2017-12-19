@@ -21,7 +21,7 @@ void Board::setBoard(vector<Troop*> troops)
 	{
 		for (int j = 0; j < ARR_LEN; j++)
 		{
-			_board[i][j] = troops[j*ARR_LEN + i]->getType();
+			_board[i][j] = troops[j*ARR_LEN + i];
 		}
 	}
 }
@@ -29,9 +29,11 @@ void Board::setBoard(vector<Troop*> troops)
 string Board::getStringBoard() const
 {
 	string str = "";
-}
-
-char ** Board::getCharBoard() const
-{
-	return nullptr;
+	for (int i = 0; i < ARR_LEN; i++)
+	{
+		for (int j = 0; j < ARR_LEN; j++)
+		{
+			str += this->_board[i][j]->getType();
+		}
+	}
 }

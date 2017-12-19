@@ -5,8 +5,8 @@
 
 class Pawn : public Troop
 {
-	Pawn(const char type, const Point pos);
+	Pawn(char type, Point pos);
 	virtual ~Pawn() = default;
 
-	virtual void verifyMove(const Point& movTo) const;
+	virtual void verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Troop* curr) const;
 };

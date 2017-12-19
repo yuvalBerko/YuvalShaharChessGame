@@ -5,8 +5,8 @@
 
 class King : public Troop
 {
-	King(const char type, const Point pos);
+	King(char type, Point pos);
 	virtual ~King() = default;
 
-	virtual void verifyMove(const Point& movTo) const;
+	virtual void verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Troop* curr) const;
 };

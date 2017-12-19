@@ -2,6 +2,9 @@
 #include <iostream>
 #include <thread>
 
+#include "Rook.h"
+#include "Troop.h"
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -66,4 +69,10 @@ void main()
 	}
 
 	p.close();
+
+	
+	char testT = 'r';
+	Point testP(0, 0);
+	
+	Troop* testR = new Rook(testT, testP);
 }
