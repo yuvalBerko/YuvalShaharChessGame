@@ -27,7 +27,7 @@ void Rook::verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Tr
 				{
 					if (currBoard[movTo.getX()][movTo.getY()]->isBlack() ^ this->isBlack()) // if its the opposite team's
 					{
-						manager->removeTroop(currBoard[movTo.getX()][movTo.getY()]); // remove the troop from the board
+						manager->removeTroop(curr->getPos()); // remove the troop from the board
 						currBoard[curr->getPos().getX()][curr->getPos().getY()] = nullptr; // set the current position of curr to null
 						curr->move(movTo); // move the troop
 						currBoard[movTo.getX()][movTo.getY()] = curr; // set the place to curr
@@ -61,7 +61,7 @@ void Rook::verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Tr
 				{
 					if (currBoard[movTo.getX()][movTo.getY()]->isBlack() ^ this->isBlack()) // if its the opposite team's
 					{
-						manager->removeTroop(currBoard[movTo.getX()][movTo.getY()]); // remove the troop from the board
+						manager->removeTroop(curr->getPos()); // remove the troop from the board
 						currBoard[curr->getPos().getX()][curr->getPos().getY()] = nullptr; // set the current position of curr to null
 						curr->move(movTo); // move the troop
 						currBoard[movTo.getX()][movTo.getY()] = curr; // set the place to curr
