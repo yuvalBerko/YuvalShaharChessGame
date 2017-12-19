@@ -11,14 +11,12 @@ using std::vector;
 class Board
 {
 private:
-	char _board[8][8];
+	Troop* _board[8][8];
 
 public:
-	Board(char board[8][8]);
-	Board(string board);
+	Board(Troop* board[8][8]);
 	~Board();
 
 	void setBoard(vector<Troop*> troops);
 	string getStringBoard() const;
-	char** getCharBoard() const;
 };
