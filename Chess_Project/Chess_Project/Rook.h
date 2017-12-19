@@ -5,8 +5,8 @@
 
 class Rook : public Troop
 {
-	Rook(const char type, const Point pos);
-	virtual ~Rook() = default;
+	Rook(char type, Point pos);
+	virtual ~Rook();
 
-	virtual void verifyMove(const Point& movTo) const;
+	virtual void verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Troop* curr) const;
 };

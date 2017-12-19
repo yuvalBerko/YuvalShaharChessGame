@@ -5,8 +5,8 @@
 
 class Queen : public Troop
 {
-	Queen(const char type, const Point pos);
+	Queen(char type, Point pos);
 	virtual ~Queen() = default;
 
-	virtual void verifyMove(const Point& movTo) const;
+	virtual void verifyMove(Point& movTo, Troop* currBoard[8][8], Manager* manager, Troop* curr) const;
 };
